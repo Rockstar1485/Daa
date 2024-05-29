@@ -1,0 +1,10 @@
+ALGORITHM Warshall(A[1..n, 1..n])
+//Implements Warshall's algorithm for computing the transitive closure 
+//Input: The adjacency matrix A of a digraph with n vertices
+//Output: The transitive closure of the digraph
+R(O)<-A
+for k 1 to n do
+  for i 1 to n do
+    for j← 1 to n do
+       R(k)[i, j] ← R(k−1)[i, j]
+return R(n)
